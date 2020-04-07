@@ -10,7 +10,7 @@ class  TestCodeClanStudents < MiniTest::Test
     end
 
     def test_student_name()
-        assert_equal("Bob", @student.name)
+        assert_equal("Bob", @student.get_name)
     end
 
     def test_student_cohort()
@@ -19,7 +19,7 @@ class  TestCodeClanStudents < MiniTest::Test
     
     def test_set_student_name()
         @student.set_name("Mike")
-        assert_equal("Mike", @student.name)
+        assert_equal("Mike", @student.get_name)
     end
 
     def test_set_student_cohort()
@@ -27,6 +27,8 @@ class  TestCodeClanStudents < MiniTest::Test
         assert_equal("E40", @student.get_cohort)
     end
 
-
+    def test_can_student_talk()
+        assert_equal("I can talk", @student.can_talk)
+    end
 
 end
